@@ -85,7 +85,7 @@ echo '<link rel="stylesheet" href="styles.css">';
     </div>
     <br />
     <div class="container">
-        <h1 style="color: #005f69;"><center>User Registration</center></h1>
+        <h1 style="color: #005f69;"><center>User Details</center></h1>
         <?php
         if (isset($_SESSION['message'])): ?>
 
