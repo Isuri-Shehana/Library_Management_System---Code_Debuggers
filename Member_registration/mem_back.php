@@ -12,27 +12,27 @@ if(isset($_POST['add_member'])){
 
     if (empty($member_id)) {
         $em = "Member ID is required";
-        header("Location: ../member.php?error=$em");
+        header("Location: index.php?error=$em");
         exit;
     } else if (!preg_match($regex, $member_id)) {
         $em = "Invalid member_id format. Please use M001, M002 Format";
-        header("Location: ../member.php?error=$em");
+        header("Location: index.php?error=$em");
         exit;
     } else if (empty($first_name)) {
         $em = "First name is required";
-        header("Location: ../member.php?error=$em");
+        header("Location: index.php?error=$em");
         exit;
     } else if (empty($last_name)) {
         $em = "Last name is required";
-        header("Location: ../member.php?error=$em");
+        header("Location: index.php?error=$em");
         exit;
     } else if (empty($birthday)) {
         $em = "Birthday is required";
-        header("Location: ../member.php?error=$em");
+        header("Location: index.php?error=$em");
         exit;
     } else if (empty($email)) {
         $em = "Email is required";
-        header("Location: ../member.php?error=$em");
+        header("Location: index.php?error=$em");
         exit;
     } else {
         $sql = "INSERT INTO member(member_id, first_name, last_name, birthday, email) 
@@ -41,11 +41,11 @@ if(isset($_POST['add_member'])){
         $stmt->bind_param("sssss", $member_id, $first_name, $last_name, $birthday, $email);
         $stmt->execute();
         
-        header("Location: ../member.php?success=Member has been registered successfully");
+        header("Location: index.php?success=Member has been registered successfully");
         exit;
     }
 } else {
-    header("Location: ../member.php");
+    header("Location: index.php");
     exit;
 }
 

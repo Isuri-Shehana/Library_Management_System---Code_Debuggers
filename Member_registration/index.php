@@ -158,7 +158,7 @@
     <h2>Member Registration</h2>
     <form method='post' action="process.php?create=true">
     <label for="member_id">Member ID:</label>
-    <input type="text" name="member_id" id="member_id" required>
+    <input type="text" name="member_id" id="member_id" pattern="^ct-\d{4}-\d{3}$" required>
 
     <label for="first_name">First Name:</label>
     <input type="text" name="first_name" id="first_name" required>
