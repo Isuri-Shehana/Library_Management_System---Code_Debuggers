@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('Asia/Colombo'); // Set Sri Lankan timezone
-require_once('config.php');
+require_once('../config.php');
 session_start();
 
 $update = false;
